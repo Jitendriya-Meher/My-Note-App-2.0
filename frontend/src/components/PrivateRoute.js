@@ -1,10 +1,7 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
-const PrivateRoute = ({children}) => {
-
-  const {isLoggedin} = useSelector(state=>state.auth);
+const PrivateRoute = ({isLoggedin,children}) => {
 
   if(isLoggedin){
     return children;
